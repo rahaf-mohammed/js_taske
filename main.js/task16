@@ -1,0 +1,21 @@
+function decapitalizeFirstLetter(inputString) {
+  if (typeof inputString !== 'string') {
+    throw new Error('Input must be a string');
+  }
+
+  if (inputString.length === 0) {
+    return inputString;
+  }
+
+  const firstChar = inputString[0].toLowerCase();
+  const restOfString = inputString.slice(1);
+
+  return firstChar + restOfString;
+}
+
+// Test the function
+const originalString = 'Hello, World!';
+const decapitalizedName = decapitalizeFirstLetter(originalString);
+
+console.log(`Original: ${originalString}`);
+console.log(`Decapitalized: ${decapitalizedName}`);

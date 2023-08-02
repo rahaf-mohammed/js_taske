@@ -1,0 +1,9 @@
+function removeFalsyValues(arr) {
+  return arr.filter(Boolean);
+}
+
+// Test the function
+const inputArray = [0, 1, false, true, '', 'hello', null, undefined, NaN, 42];
+const filteredArray = removeFalsyValues(inputArray);
+
+console.log(filteredArray);

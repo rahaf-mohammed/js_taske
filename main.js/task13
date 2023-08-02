@@ -1,0 +1,28 @@
+function replaceKeysWithValues(obj, keyMapping) {
+  const newObj = {};
+
+  for (const key in obj) {
+    if (keyMapping.hasOwnProperty(key)) {
+      newObj[keyMapping[key]] = obj[key];
+    } else {
+      newObj[key] = obj[key];
+    }
+  }
+
+  return newObj;
+}
+
+// Example usage:
+const originalObject = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+};
+
+const keyMapping = {
+  firstName: "first_name",
+  lastName: "last_name",
+};
+
+const updatedObject = replaceKeysWithValues(originalObject, keyMapping);
+console.log(updatedObject);

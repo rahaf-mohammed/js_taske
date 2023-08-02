@@ -1,0 +1,11 @@
+let num = 1;
+const rows = 4;
+
+for (let i = 1; i <= rows; i++) {
+    let rowOutput = '';
+    for (let j = 1; j <= i; j++) {
+        rowOutput += num + ' ';
+        num++;
+    }
+    console.log(rowOutput);
+}

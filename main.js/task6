@@ -1,0 +1,11 @@
+function doubleNumbers(arr) {
+  let doubledArray = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    doubledArray.push(arr[i] * 2);
+  }
+  
+  return doubledArray;
+}
+
+console.log(doubleNumbers([2, 5, 100])); // Output: [4, 10, 200]

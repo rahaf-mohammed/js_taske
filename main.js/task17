@@ -1,0 +1,26 @@
+function convertToSafeInteger(value) {
+  // Check if the value is a number
+  if (typeof value !== 'number') {
+    throw new Error('Input is not a number');
+  }
+  
+  // Check if the value is NaN or Infinity
+  if (!Number.isFinite(value)) {
+    throw new Error('Input is not a finite number');
+  }
+  
+  // Get the maximum and minimum safe integer values
+  const maxSafeInt = Number.MAX_SAFE_INTEGER;
+  const minSafeInt = Number.MIN_SAFE_INTEGER;
+  
+  // Convert the value to a safe integer
+  const safeInt = Math.max(minSafeInt, Math.min(maxSafeInt, Math.round(value)));
+  
+  return safeInt;
+}
+
+// Test the function
+const inputValue = 123.456;
+const safeValue = convertToSafeInteger(inputValue);
+console.log(`Original value: ${inputValue}`);
+console.log(`Safe integer value: ${safeValue}`);

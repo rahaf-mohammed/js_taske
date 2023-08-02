@@ -1,0 +1,20 @@
+// Original function that accepts an array
+function processArray(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+
+// New variadic function using the spread operator
+function processVariadic(...args) {
+  for (let i = 0; i < args.length; i++) {
+    console.log(args[i]);
+  }
+}
+
+// Testing the original function
+const myArray = [1, 2, 3, 4, 5];
+processArray(myArray);
+
+// Testing the variadic function
+processVariadic(1, 2, 3, 4, 5);

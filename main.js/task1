@@ -1,0 +1,15 @@
+// Function to calculate the summation of three numbers
+function calculateSum(num1, num2, num3) {
+  return num1 + num2 + num3;
+}
+
+// Taking user input for three numbers
+const num1 = parseFloat(prompt("Enter the first number:"));
+const num2 = parseFloat(prompt("Enter the second number:"));
+const num3 = parseFloat(prompt("Enter the third number:"));
+
+// Calculate the summation
+const sum = calculateSum(num1, num2, num3);
+
+// Display the summation on the console
+console.log("Sum of the three numbers:", sum);

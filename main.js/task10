@@ -1,0 +1,21 @@
+function csvTo2DArray(csvString) {
+  const lines = csvString.trim().split('\n');
+  const result = [];
+
+  for (const line of lines) {
+    const values = line.split(',');
+    result.push(values);
+  }
+
+  return result;
+}
+
+const csvString = `
+John,Doe,25
+Jane,Smith,30
+Bob,Johnson,28
+`;
+
+const csvArray = csvTo2DArray(csvString);
+
+console.log(csvArray);

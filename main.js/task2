@@ -1,0 +1,28 @@
+// Prompt the user for inputs
+const operation = prompt("Enter the operation (+, -, *, /):");
+const number1 = parseFloat(prompt("Enter the first number:"));
+const number2 = parseFloat(prompt("Enter the second number:"));
+
+let result;
+
+// Perform the selected operation
+if (operation === "+") {
+  result = number1 + number2;
+} else if (operation === "-") {
+  result = number1 - number2;
+} else if (operation === "*") {
+  result = number1 * number2;
+} else if (operation === "/") {
+  if (number2 !== 0) {
+    result = number1 / number2;
+  } else {
+    console.log("Error: Cannot divide by zero.");
+  }
+} else {
+  console.log("Error: Invalid operation.");
+}
+
+// Log the result
+if (result !== undefined) {
+  console.log("Result:", result);
+}

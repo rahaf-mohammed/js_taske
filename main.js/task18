@@ -1,0 +1,25 @@
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function generateRandomIntArray(n, minRange, maxRange) {
+  if (n <= 0 || minRange > maxRange) {
+    return [];
+  }
+  
+  const randomIntArray = [];
+  
+  for (let i = 0; i < n; i++) {
+    const randomInt = getRandomInt(minRange, maxRange);
+    randomIntArray.push(randomInt);
+  }
+  
+  return randomIntArray;
+}
+
+const n = 10; // Number of random integers
+const minRange = 1; // Minimum value
+const maxRange = 100; // Maximum value
+
+const randomIntegers = generateRandomIntArray(n, minRange, maxRange);
+console.log(randomIntegers);

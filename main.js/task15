@@ -1,0 +1,22 @@
+function extendColorCode(shortColor) {
+  // Ensure the input is a valid 3-digit color code
+  if (!/^#[0-9A-Fa-f]{3}$/.test(shortColor)) {
+    throw new Error('Invalid 3-digit color code');
+  }
+  
+  // Extract individual components
+  const r = shortColor[1];
+  const g = shortColor[2];
+  const b = shortColor[3];
+
+  // Create the extended 6-digit color code
+  const extendedColor = `#${r}${r}${g}${g}${b}${b}`;
+
+  return extendedColor;
+}
+
+// Example usage
+const shortColorCode = "#F06"; // Replace this with your 3-digit color code
+const extendedColorCode = extendColorCode(shortColorCode);
+console.log(`Original color: ${shortColorCode}`);
+console.log(`Extended color: ${extendedColorCode}`);

@@ -1,0 +1,14 @@
+function objectToArray(obj) {
+  return Object.entries(obj);
+}
+
+// Example object
+const myObject = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+const keyValueArray = objectToArray(myObject);
+
+console.log(keyValueArray);
